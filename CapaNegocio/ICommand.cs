@@ -4,9 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CapaEntidad
+namespace CapaNegocio
 {
-    public class Class1
+    public interface ICommand<T>
     {
+        T Do(T input);
+        T Undo(T input);
     }
 }
